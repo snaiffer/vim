@@ -2,7 +2,7 @@
 HowTo set:
     $ sudo apt-get -y install vim git ctags clang libclang-dev
     $ cd ~
-    $ git clone <URL_to_repo>
+    $ git clone <URL_to_repo> .vim
     $ ln -s .vim/vimrc .vimrc
     $ vim 
         :BundleInstall
