@@ -398,15 +398,15 @@
   " Vundle  --plugins manager
 
   " Settings for plugins
-    " For Clang_complete
+    " Clang_complete
       let g:clang_user_options='|| exit 0'
       " let g:clang_user_options='' " for example: '-std=c++11' 
 
-    " For ctags
+    " ctags
       set tags=/usr/include/tags,./tags
 
-    " For Taglist
-      let Tlist_Exit_OnlyWindow = 1   " To exit Vim when only the taglist window is present
+    " NERDTree
+      let g:NERDTreeWinSize=25  " width of window
   " Settings for plugins
 
 " Plugins
@@ -492,9 +492,6 @@
     nmap <S-down> :tabclose<cr>
     imap <S-down> <ESC>:tabclose<cr>
   " Переключение табов (вкладок) (rxvt-style)
-
-  " For Taglist
-    nnoremap <silent> <F9> :TlistOpen<CR>
 
   " For Tagbar
     nmap <F8> :TagbarToggle<CR> 
