@@ -93,12 +93,13 @@
 
 
 " Folding
-  set foldenable          " включить фолдинг
+  set foldenable          " Turn on folding
   set foldmethod=syntax   " определять блоки на основе синтаксиса файла
   "set foldmethod=indent  " определять блоки на основе отступов
   "set foldmethod=manual 
   set foldcolumn=3        " показать полосу для управления сворачиванием
-  set foldlevel=1         " Первый уровень вложенности открыт, остальные закрыты
+  "set foldlevel=1         " Первый уровень вложенности открыт, остальные закрыты
+  set foldlevel=99        " All levels are opened
   set foldopen=all        " автоматическое открытие сверток при заходе в них
 " Folding
 
@@ -348,13 +349,13 @@
 " Searching text
 
 
-" Проверка орфографии
+" Spell checker
   if version >= 700
   " По умолчанию проверка орфографии выключена.
    set spell spelllang=
    set nospell
   endif
-" Проверка орфографии
+" Spell checker
 
 
 " Plugins
@@ -383,6 +384,10 @@
           Bundle 'tpope/vim-fugitive'
         " auto-complete code for Python
           Bundle 'davidhalter/jedi-vim'
+        " A lib of functions for 'vim-easytags'
+          Bundle 'xolox/vim-misc.git'
+        " auto-generation tags
+          Bundle 'xolox/vim-easytags'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
@@ -407,6 +412,9 @@
 
     " NERDTree
       let g:NERDTreeWinSize=25  " width of window
+
+    " Tagbar 
+      let g:tagbar_width=25  " width of window
   " Settings for plugins
 
 " Plugins
@@ -497,7 +505,7 @@
     nmap <F8> :TagbarToggle<CR> 
 
   " Update ctags
-    nmap <F3> :!echo "Ctags creation for the current dir is stated. It may take much time. Wait." && ctags -R --extra=+q .<CR><CR> 
+    nmap <F3> :!echo "Ctags will be created for the current dir. It may take a long time. Please wait." && ctags -R --extra=+q .<CR><CR> 
 
   " File Manager
     map <F12> :NERDTreeToggle<cr>
