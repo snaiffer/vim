@@ -8,6 +8,7 @@
   filetype plugin on
   filetype plugin indent on " определять подсветку на основе кода файла
   filetype indent on
+  au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class  " auto-indent for Python
   "Удалять пустые пробелы на концах строк при открытии файла
   "autocmd BufEnter *.* :call RemoveTrailingSpaces()
   "Путь для поиска файлов командами gf, [f, ]f, ^Wf, :find, :sfind, :tabfind и т.д.
