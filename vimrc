@@ -404,7 +404,8 @@
       " let g:clang_user_options='' " for example: '-std=c++11' 
 
     " ctags
-      set tags=/usr/include/tags,./tags
+      "set tags=/usr/include/tags,./tags
+      set tags=/usr/lib/python2.7/dist-packages/kivy/tags,./tags
 
     " NERDTree
       let g:NERDTreeWinSize=25  " width of window
@@ -521,6 +522,8 @@
       nmap <silent> <unique> <Leader>sn :SN<CR> 
   " Search Stack
 
+  " Replace the word under the cursor through all text
+    nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 " Hot Keys
 
 
