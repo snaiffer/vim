@@ -465,6 +465,9 @@
     menu make.errors_List<Tab>,l ,l
   " Wrapper for :make
   
+  " Save and run
+    nmap <Leader>w :w \| !clear && ./% <cr>
+
   " Buffers
     " F5 --show the list of buffers
       nmap <F5> <Esc>:buffers<cr>
