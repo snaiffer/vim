@@ -8,6 +8,7 @@
   filetype plugin on
   filetype plugin indent on " определять подсветку на основе кода файла
   filetype indent on
+  au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class  " auto-indent for Python
   "Удалять пустые пробелы на концах строк при открытии файла
   "autocmd BufEnter *.* :call RemoveTrailingSpaces()
   "Путь для поиска файлов командами gf, [f, ]f, ^Wf, :find, :sfind, :tabfind и т.д.
@@ -398,15 +399,16 @@
   " Vundle  --plugins manager
 
   " Settings for plugins
-    " For Clang_complete
+    " Clang_complete
       let g:clang_user_options='|| exit 0'
       " let g:clang_user_options='' " for example: '-std=c++11' 
 
-    " For ctags
-      set tags=/usr/include/tags,./tags
+    " ctags
+      "set tags=/usr/include/tags,./tags
+      set tags=/usr/lib/python2.7/dist-packages/kivy/tags,./tags
 
-    " For Taglist
-      let Tlist_Exit_OnlyWindow = 1   " To exit Vim when only the taglist window is present
+    " NERDTree
+      let g:NERDTreeWinSize=25  " width of window
   " Settings for plugins
 
 " Plugins
@@ -496,9 +498,6 @@
     imap <S-down> <ESC>:tabclose<cr>
   " Переключение табов (вкладок) (rxvt-style)
 
-  " For Taglist
-    nnoremap <silent> <F9> :TlistOpen<CR>
-
   " For Tagbar
     nmap <F8> :TagbarToggle<CR> 
 
@@ -526,6 +525,8 @@
       nmap <silent> <unique> <Leader>sn :SN<CR> 
   " Search Stack
 
+  " Replace the word under the cursor through all text
+    nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 " Hot Keys
 
 
