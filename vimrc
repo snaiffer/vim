@@ -468,7 +468,7 @@
   " Wrapper for :make
   
   " Save and run
-    nmap <Leader>w :w \| !clear && ./% <cr>
+    nmap <Leader>w :w \| !chmod +x ./% && clear && ./% <cr>
 
   " Buffers
     " F5 --show the list of buffers
