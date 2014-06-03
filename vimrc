@@ -99,7 +99,7 @@
   "set foldmethod=indent  " определять блоки на основе отступов
   "set foldmethod=manual 
   set foldcolumn=3        " показать полосу для управления сворачиванием
-  set foldlevel=1         " Первый уровень вложенности открыт, остальные закрыты
+  set foldlevel=99        " по умолчанию всё развёрнуто
   set foldopen=all        " автоматическое открытие сверток при заходе в них
 " Folding
 
