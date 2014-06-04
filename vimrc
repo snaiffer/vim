@@ -57,7 +57,8 @@
   set noswapfile            " не использовать своп-файл (в него скидываются открытые буферы)
   set browsedir=current
   set visualbell            " вместо писка бипером мигать курсором при ошибках ввода
-  set clipboard=unnamed     " во избежание лишней путаницы использовать системный буфер обмена вместо буфера Vim
+  "set clipboard=unnamed     " во избежание лишней путаницы использовать системный буфер обмена вместо буфера Vim
+  set clipboard=unnamedplus " automatically use the + buffer (the system clipboard) by default
   set backup                " включить сохранение резервных копий
   set title                 " показывать имя буфера в заголовке терминала
   set history=128           " хранить больше истории команд
