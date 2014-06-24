@@ -472,17 +472,17 @@
     nmap <Leader>w :w \| !chmod +x ./% && clear && ./% <cr>
 
   " Buffers
-    " F6 --show previous buffer
+    " show previous buffer
       map <A-left> :bp<cr>
       nmap <A-left> :bp<cr>
       imap <A-left> <ESC>:bp<cr>i
-    " F7 --show next buffer
+    " show next buffer
       map <A-right> :bn<cr>
       nmap <A-right> :bn<cr>
       imap <A-right> <ESC>:bn<cr>i
-    " show the list of buffers
-      nmap <A-up> :ls<cr>
-      imap <A-up> <ESC>:ls<cr>
+    " open all buffers in a new tab
+      nmap <A-up> :tab sball<cr>
+      imap <A-up> <ESC>:tab sball<cr>
     " close the current buffer
       nmap <A-down> :bd<cr>
       imap <A-down> <ESC>:bd<cr>
