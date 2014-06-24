@@ -493,8 +493,8 @@
     map <S-right> :tabnext<cr>
     nmap <S-right> :tabnext<cr>
     imap <S-right> <ESC>:tabnext<cr>i
-    nmap <S-up> :tabnew<cr>
-    imap <S-up> <ESC>:tabnew<cr>
+    nmap <S-up> :tabedit %<cr>
+    imap <S-up> <ESC>:tabedit %<cr>
     nmap <S-down> :tabclose<cr>
     imap <S-down> <ESC>:tabclose<cr>
   " Переключение табов (вкладок) (rxvt-style)
