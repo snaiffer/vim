@@ -472,18 +472,20 @@
     nmap <Leader>w :w \| !chmod +x ./% && clear && ./% <cr>
 
   " Buffers
-    " F5 --show the list of buffers
-      nmap <F5> <Esc>:buffers<cr>
-      vmap <F5> <esc>:buffers<cr>
-      imap <F5> <esc><esc>:buffers<cr>a
     " F6 --show previous buffer
-      map <F6> :bp<cr>
-      vmap <F6> <esc>:bp<cr>i
-      imap <F6> <esc>:bp<cr>i
+      map <A-left> :bp<cr>
+      nmap <A-left> :bp<cr>
+      imap <A-left> <ESC>:bp<cr>i
     " F7 --show next buffer
-      map <F7> :bn<cr>
-      vmap <F7> <esc>:bn<cr>i
-      imap <F7> <esc>:bn<cr>i
+      map <A-right> :bn<cr>
+      nmap <A-right> :bn<cr>
+      imap <A-right> <ESC>:bn<cr>i
+    " show the list of buffers
+      nmap <A-up> :ls<cr>
+      imap <A-up> <ESC>:ls<cr>
+    " close the current buffer
+      nmap <A-down> :bd<cr>
+      imap <A-down> <ESC>:bd<cr>
   " Buffers
 
   " Переключение табов (вкладок) (rxvt-style)
