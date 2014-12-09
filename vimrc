@@ -385,6 +385,8 @@
           Bundle 'tpope/vim-fugitive'
         " auto-complete code for Python
           Bundle 'davidhalter/jedi-vim'
+        " HTML5 + inline SVG omnicomplete funtion, indent and syntax
+          Bundle 'othree/html5.vim'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
