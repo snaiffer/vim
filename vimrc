@@ -387,6 +387,8 @@
           Bundle 'davidhalter/jedi-vim'
         " HTML5 + inline SVG omnicomplete funtion, indent and syntax
           Bundle 'othree/html5.vim'
+        " syntax and indent plugins for JavaScript
+          Bundle "pangloss/vim-javascript"
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
