@@ -388,7 +388,9 @@
         " HTML5 + inline SVG omnicomplete funtion, indent and syntax
           Bundle 'othree/html5.vim'
         " syntax and indent plugins for JavaScript
-          Bundle "pangloss/vim-javascript"
+          Bundle 'pangloss/vim-javascript'
+        " for bookmarks
+          Bundle 'MattesGroeger/vim-bookmarks'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
