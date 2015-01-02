@@ -75,7 +75,9 @@
   set list                  " show tabs and trailing spaces
   set listchars=tab:▸-,trail:⋅
   set cursorline            " to highlight the current line
-  hi CursorLine ctermfg=NONE cterm=NONE ctermbg=60  " color scheme for highlight the current line
+  " color scheme for highlight the current line
+  hi CursorLine ctermfg=NONE cterm=NONE ctermbg=236
+  " hi CursorLine ctermfg=NONE cterm=NONE ctermbg=17
 
   " Status line
     set laststatus=2          " always show status bar
