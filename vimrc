@@ -20,7 +20,7 @@
     set backupdir-=.
     set backupdir^=~/tmp,/tmp
 
-  " Удалить пробелы в конце строк (frantsev)
+  " Delete trailing spaces (frantsev)
   function! RemoveTrailingSpaces()
     normal! mzHmy
     execute '%s:\s\+$::ge'
@@ -32,7 +32,7 @@
 " Outward apprearance and Main settings
   set nocompatible          " отключить режим совместимости с классическим Vi
   set scrolloff=10          " сколько строк внизу и вверху экрана показывать при скроллинге
-  set background=dark       " установить цвет фона
+  set background=dark       " background color
   colorscheme elflord
   if has("syntax")          " syntax highlighting by default.
     syntax on
@@ -72,11 +72,13 @@
   set whichwrap=<,>,[,],h,l " не останавливаться курсору на конце строки
   set showmode              " show the current mode in command line
   set completeopt=menu      " view mode for auto-competion
-  set list                  " отображаем табуляции и конечные пробелы...
+  set list                  " show tabs and trailing spaces
   set listchars=tab:▸-,trail:⋅
+  set cursorline            " to highlight the current line
+  hi CursorLine ctermfg=NONE cterm=NONE ctermbg=60  " color scheme for highlight the current line
 
   " Status line
-    set laststatus=2          " всегда показывать строку состояния
+    set laststatus=2          " always show status bar
     " airline settings (Status line)
       let g:airline_section_x='(%y %{strlen(&fenc)?&fenc:"none"} %{&ff})'  " file type + file encoding + file format
     " airline settings (Status line)
@@ -340,13 +342,13 @@
 " Searching text
 
 
-" Проверка орфографии
+" Spelling
   if version >= 700
-    " По умолчанию проверка орфографии выключена.
+    " Spelling is off by default
     set spell spelllang=
     set nospell
   endif
-" Проверка орфографии
+" Spelling
 
 
 " Plugins
@@ -383,6 +385,7 @@
           Bundle 'MattesGroeger/vim-bookmarks'
         " Pretty status line
           Bundle 'bling/vim-airline'
+        " AutoClose for characters like: [, (, {, ", '
           Bundle 'AutoClose'
 
       "репозитории vim/scripts
@@ -416,17 +419,16 @@
 
 " Hot Keys
   " Usual Ctrl
-    " CTRL-X - вырезать
+    " CTRL-X - cut
     vnoremap <C-X> "+x
-    " CTRL-C - копировать
+    " CTRL-C - copy
     vnoremap <C-C> "+y
-    " CTRL-V вставить под курсором
+    " CTRL-V - insert
     map <C-V>      "+gP
-    "" Отменить-вернуть через Ctrl
-    " отмена действия
+    " Undo
     noremap <C-Z> u
     inoremap <C-Z> <C-O>u
-    " вернуть отменённое назад
+    " Redo
     noremap <C-Y> <C-R>
     inoremap <C-Y> <C-O><C-R>
   " Usual Ctrl
@@ -466,7 +468,7 @@
     menu make.previous_Error<Tab>,p ,p
     menu make.errors_List<Tab>,l ,l
   " Wrapper for :make
- 
+
   " Save and run
     nmap <Leader>w :w \| !chmod +x ./% && clear && ./% <cr>
 
@@ -487,7 +489,7 @@
       imap <A-down> <ESC>:bd<cr>
   " Buffers
 
-  " Переключение табов (вкладок) (rxvt-style)
+  " Tabs toggle (for inset) (rxvt-style)
     map <S-left> :tabprevious<cr>
     nmap <S-left> :tabprevious<cr>
     imap <S-left> <ESC>:tabprevious<cr>i
@@ -498,7 +500,7 @@
     imap <S-up> <ESC>:tabedit %<cr>
     nmap <S-down> :tabclose<cr>
     imap <S-down> <ESC>:tabclose<cr>
-  " Переключение табов (вкладок) (rxvt-style)
+  " Tabs toggle (for inset) (rxvt-style)
 
   " For Tagbar
     nmap <F8> :TagbarToggle<CR>
