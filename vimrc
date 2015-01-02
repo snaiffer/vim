@@ -383,6 +383,7 @@
           Bundle 'MattesGroeger/vim-bookmarks'
         " Pretty status line
           Bundle 'bling/vim-airline'
+          Bundle 'AutoClose'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
