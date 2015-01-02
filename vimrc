@@ -77,19 +77,9 @@
 
   " Status line
     set laststatus=2          " всегда показывать строку состояния
-    "set statusline=%{fugitive#statusline()} " git
-    set statusline=%t         " tail of the filename
-    set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-    set statusline+=%{&ff}]   " file format
-    set statusline+=%h        " help file flag
-    set statusline+=%m        " modified flag
-    set statusline+=%r        " read only flag
-    set statusline+=%y        " filetype
-    set statusline+=%=        " left/right separator
-    set statusline+=%c,       " cursor column
-    set statusline+=%l/%L     " cursor line/total lines
-    "Изменяет шрифт строки статуса (делает его не жирным)
-    hi StatusLine gui=reverse cterm=reverse
+    " airline settings (Status line)
+      let g:airline_section_x='(%y %{strlen(&fenc)?&fenc:"none"} %{&ff})'  " file type + file encoding + file format
+    " airline settings (Status line)
   " Status line
 " Outward apprearance and Main settings
 
@@ -391,6 +381,8 @@
           Bundle 'pangloss/vim-javascript'
         " for bookmarks
           Bundle 'MattesGroeger/vim-bookmarks'
+        " Pretty status line
+          Bundle 'bling/vim-airline'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
