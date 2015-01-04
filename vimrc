@@ -388,7 +388,7 @@
         " Pretty status line
           Bundle 'bling/vim-airline'
         " AutoClose for characters like: [, (, {, ", '
-          Bundle 'AutoClose'
+        "  Bundle 'AutoClose'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
