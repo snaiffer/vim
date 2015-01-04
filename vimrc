@@ -82,7 +82,7 @@
   " Status line
     set laststatus=2          " always show status bar
     " airline settings (Status line)
-      let g:airline_section_x='(%y %{strlen(&fenc)?&fenc:"none"} %{&ff})'  " file type + file encoding + file format
+      "let g:airline_section_x='(%y %{strlen(&fenc)?&fenc:"none"} %{&ff})'  " file type + file encoding + file format
     " airline settings (Status line)
   " Status line
 " Outward apprearance and Main settings
