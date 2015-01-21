@@ -389,6 +389,8 @@
           Bundle 'bling/vim-airline'
         " AutoClose for characters like: [, (, {, ", '
         "  Bundle 'AutoClose'
+        " Undo branches (a tree of history)
+          Bundle 'mbbill/undotree'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
@@ -509,6 +511,9 @@
 
   " Update ctags
     nmap <F3> :!echo "Ctags creation for the current dir is stated. It may take much time. Wait." && ctags -R --extra=+q .<CR><CR>
+
+  " For Undotree
+    nmap <F9> :UndotreeToggle<CR>
 
   " File Manager
     map <F12> :NERDTreeToggle<cr>
