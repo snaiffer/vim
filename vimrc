@@ -61,8 +61,6 @@
   set clipboard=unnamedplus " automatically use the + buffer (the system clipboard) by default
   set backup                " включить сохранение резервных копий
   set title                 " показывать имя буфера в заголовке терминала
-  set history=128           " хранить больше истории команд
-  set undolevels=2048       " хранить историю изменений числом N
   "подсвечивает все слова, которые совпадают со словом под курсором.
   autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<cword>'))
   set number                " отображение номеров строк
@@ -78,6 +76,13 @@
   " color scheme for highlight the current line
   hi CursorLine ctermfg=NONE cterm=NONE ctermbg=236
   " hi CursorLine ctermfg=NONE cterm=NONE ctermbg=17
+
+  " History
+    set history=128           " хранить больше истории команд
+    set undolevels=2048       " хранить историю изменений числом N
+    set undodir=~/.vim/temp " path where to save files with history
+    set undofile              " turn on saving history between sessions
+  " History
 
   " Status line
     set laststatus=2          " always show status bar
