@@ -80,8 +80,10 @@
   " History
     set history=128           " хранить больше истории команд
     set undolevels=2048       " хранить историю изменений числом N
-    set undodir=~/.vim/temp " path where to save files with history
-    set undofile              " turn on saving history between sessions
+    if has("persistent_undo") " find out if vim support undo's features
+      set undodir=~/.vim/temp " path where to save files with history
+      set undofile              " turn on saving history between sessions
+    endif
   " History
 
   " Status line
