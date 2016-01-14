@@ -1,12 +1,7 @@
 
 HowTo set:
     $ sudo apt-get -y install vim git ctags clang libclang-dev
-    $ cd ~ && rm -Rf .vim .vimrc
-    $ git clone https://github.com/snaiffer/vim.git .vim
-    $ ln -s .vim/vimrc .vimrc
-    $ vim 
-        :BundleInstall
-        :qa!
+    $ rm -Rf ~/.vim ~/.vimrc && git clone https://github.com/snaiffer/vim.git ~/.vim && ln -s ~/.vim/vimrc ~/.vimrc && vim -c "BundleInstall" -c 'qa!'
 
 [Additionally:]
     Generate tags for C/C++
