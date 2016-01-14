@@ -398,6 +398,9 @@
         "  Bundle 'AutoClose'
         " Undo branches (a tree of history)
           Bundle 'mbbill/undotree'
+        " Highlighting for Markdown language
+          Bundle 'godlygeek/tabular'
+          Bundle 'plasticboy/vim-markdown'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
