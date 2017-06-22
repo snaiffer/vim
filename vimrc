@@ -6,9 +6,7 @@
   set encoding=utf-8
   filetype on               " Применять типы файлов
   filetype plugin on
-  filetype plugin indent on " определять подсветку на основе кода файла
   filetype indent on
-  au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class  " auto-indent for Python
   "Удалять пустые пробелы на концах строк при открытии файла
   "autocmd BufEnter *.* :call RemoveTrailingSpaces()
   "Путь для поиска файлов командами gf, [f, ]f, ^Wf, :find, :sfind, :tabfind и т.д.
@@ -362,6 +360,8 @@
 
 " Plugins
   " Vundle  --plugins manager
+  " :BundleInstall  --update bundles or install new ones
+  "
     set nocompatible
     filetype off                " required!
 
@@ -386,6 +386,8 @@
           Bundle 'tpope/vim-fugitive'
         " auto-complete code for Python
           Bundle 'davidhalter/jedi-vim'
+        " A nicer Python indentation style
+          Bundle 'Vimjas/vim-python-pep8-indent'
         " HTML5 + inline SVG omnicomplete funtion, indent and syntax
           Bundle 'othree/html5.vim'
         " syntax and indent plugins for JavaScript
@@ -401,6 +403,18 @@
         " Highlighting for Markdown language
           Bundle 'godlygeek/tabular'
           Bundle 'plasticboy/vim-markdown'
+        " provides syntax highlighting and auto-completion support for PostgreSQL
+          Bundle 'exu/pgsql.vim'
+        " to execute postgresql or mysql commands from VIM buffer
+          Bundle 'ivalkeen/vim-simpledb'
+        " Completion for the SQL language includes statements, functions,
+        " keywords, operators and database. It will also dynamically complete
+        " tables, procedures, views and column lists with data pulled directly
+        " from a database.
+          Bundle 'vim-scripts/SQLComplete.vim'
+        " This plugin contains functions/mappings/commands to enable Vim to
+        " access several databases. 
+          Bundle 'vim-scripts/dbext.vim'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
