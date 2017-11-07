@@ -2,7 +2,7 @@
 " Working with files
   set autowrite             " for autosaving file when you execute :make and some commands like this one
   set termencoding=utf-8
-  set fileencodings=utf-8,cp1251
+  set fileencodings=utf-8
   set encoding=utf-8
   filetype on               " Применять типы файлов
   filetype plugin on
@@ -385,7 +385,7 @@
         " Git wrapper
           Bundle 'tpope/vim-fugitive'
         " auto-complete code for Python
-          Bundle 'davidhalter/jedi-vim'
+        "  Bundle 'davidhalter/jedi-vim'
         " A nicer Python indentation style
           Bundle 'Vimjas/vim-python-pep8-indent'
         " HTML5 + inline SVG omnicomplete funtion, indent and syntax
@@ -415,6 +415,9 @@
         " This plugin contains functions/mappings/commands to enable Vim to
         " access several databases. 
           Bundle 'vim-scripts/dbext.vim'
+        " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion
+        " engine for Vim. It has several completion engines
+          Bundle 'valloric/youcompleteme'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
@@ -566,5 +569,6 @@
 
 
 " Test settings
+
 
 " Test settings
