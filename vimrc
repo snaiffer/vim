@@ -406,7 +406,7 @@
         " provides syntax highlighting and auto-completion support for PostgreSQL
           Bundle 'exu/pgsql.vim'
         " to execute postgresql or mysql commands from VIM buffer
-          Bundle 'ivalkeen/vim-simpledb'
+        "  Bundle 'ivalkeen/vim-simpledb'
         " Completion for the SQL language includes statements, functions,
         " keywords, operators and database. It will also dynamically complete
         " tables, procedures, views and column lists with data pulled directly
@@ -414,10 +414,10 @@
           Bundle 'vim-scripts/SQLComplete.vim'
         " This plugin contains functions/mappings/commands to enable Vim to
         " access several databases. 
-          Bundle 'vim-scripts/dbext.vim'
+        "  Bundle 'vim-scripts/dbext.vim'
         " YouCompleteMe is a fast, as-you-type, fuzzy-search code completion
         " engine for Vim. It has several completion engines
-          Bundle 'valloric/youcompleteme'
+        "  Bundle 'valloric/youcompleteme'
 
       "репозитории vim/scripts
         " Bundle 'FuzzyFinder'
