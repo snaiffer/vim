@@ -447,19 +447,21 @@
 
 " Plugins
 
-
 " Hot Keys
   " Usual Ctrl
     " CTRL-X - cut
     vnoremap <C-X> "+x
     " CTRL-C - copy
-    vnoremap <C-C> "+y
+    "vnoremap <C-C> "+y
+    vmap <C-C> "yy <Bar> :call system('xclip -selection clipboard', @y)<CR>
     " CTRL-V - insert
-    map <C-V>      "+gP
+    "map <C-V>      "+gP
+    map <C-V> :r!xclip -o -selection clipboard
     " Undo
     noremap <C-Z> u
     inoremap <C-Z> <C-O>u
     " Redo
+    " Note: <C-S-Z> doesn't work
     noremap <C-Y> <C-R>
     inoremap <C-Y> <C-O><C-R>
   " Usual Ctrl
