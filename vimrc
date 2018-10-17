@@ -2,7 +2,7 @@
 " Working with files
   set autowrite             " for autosaving file when you execute :make and some commands like this one
   set termencoding=utf-8
-  set fileencodings=utf-8
+  set fileencodings=utf-8,cp1251
   set encoding=utf-8
   filetype on               " Применять типы файлов
   filetype plugin on
