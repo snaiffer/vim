@@ -18,11 +18,24 @@ https://stackoverflow.com/questions/5240473/in-vim-with-xclip-yank-to-clipboard
 * First install xclip on both your local machine and the server:
 apt-get install xclip
 
-* Next, enable X11 forwarding on the server. Add the following to /etc/ssh/sshd_config:
+* sshd
+
+* * Next, enable X11 forwarding on the server. Add the following to /etc/ssh/sshd_config:
 X11Forwarding yes
+
+* * [
+Ошибка форвардинга X11 может также произойти, если удаленный хост на котором работает сервер SSH, отключен IPv6. В этом случае надо добавить:
+AddressFamily inet
+]
+
+* * Check config-file
+/usr/sbin/sshd -t
+
+* * sudo service sshd restart
 
 * Auto-use forwarding on client. Add the following to ~/.ssh/config:
 ForwardX11 yes
+
 
 ** Check. 
 *** Connect to server:
